@@ -1,0 +1,326 @@
+/* ==========================================================================
+   Online Quran Academy — Teacher Bua Qasim Shigry
+   Responsive & Accessibility Stylesheet (css/responsive.css)
+   Clean breakpoints for mobile, tablet, desktop, and accessibility modes
+   ========================================================================== */
+
+/* Tablet & Smaller Laptops (<= 1024px) */
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .hero-image-frame {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .courses-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .books-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .intl-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .teacher-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .teacher-portrait-frame {
+    max-width: 380px;
+    margin: 0 auto;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .prayer-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile & Small Tablets (<= 768px) */
+@media (max-width: 768px) {
+  :root {
+    --container-padding: 1rem;
+  }
+
+  .announcement-bar {
+    font-size: 0.78rem;
+    padding: 0.4rem 0.75rem;
+  }
+
+  /* Mobile Top Bar & Hamburger */
+  .navbar {
+    height: 4rem;
+  }
+
+  .mobile-nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 4rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ffffff;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 1.5rem;
+    overflow-y: auto;
+    border-top: 1px solid var(--color-border);
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-normal);
+    z-index: 999;
+  }
+
+  .nav-menu.is-active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-link {
+    padding: 0.85rem 0.5rem;
+    font-size: 1.05rem;
+    border-bottom: 1px solid var(--color-border-subtle);
+  }
+
+  .nav-dropdown .dropdown-panel {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    border: none;
+    background: var(--color-sage-light);
+    border-radius: var(--radius-sm);
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .nav-actions .nav-auth-link {
+    display: none;
+  }
+
+  .nav-actions .btn {
+    padding: 0.5rem 0.85rem;
+    font-size: 0.8rem;
+  }
+
+  /* Hero Section Mobile */
+  .hero-section {
+    padding: 2.5rem 0 2rem;
+  }
+
+  .hero-headline {
+    font-size: 1.85rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .hero-trust-row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .hero-floating-card {
+    position: static;
+    margin-top: 1rem;
+  }
+
+  /* Stats Bar Mobile */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .stat-number {
+    font-size: 1.65rem;
+  }
+
+  /* Section Spacing */
+  .section {
+    padding: 3.5rem 0;
+  }
+
+  .section-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  /* Grids to Single Column */
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resources-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .books-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .intl-regions-list {
+    grid-template-columns: 1fr;
+  }
+
+  .teacher-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group.col-span-2 {
+    grid-column: span 1;
+  }
+
+  .form-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Prayer Times Mobile */
+  .prayer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Tasbeeh Mobile */
+  .tasbeeh-card {
+    padding: 1.75rem 1rem;
+  }
+
+  .tasbeeh-counter-display {
+    width: 9.5rem;
+    height: 9.5rem;
+  }
+
+  .tasbeeh-count-value {
+    font-size: 2.85rem;
+  }
+
+  .floating-whatsapp {
+    bottom: 1rem;
+    right: 1rem;
+    width: 3.25rem;
+    height: 3.25rem;
+  }
+
+  .back-to-top {
+    bottom: 4.75rem;
+    right: 1.25rem;
+  }
+}
+
+/* Extra Small Phones (<= 480px) */
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .course-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .prayer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Reduced Motion Preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* High Contrast / Print Support */
+@media print {
+  .site-header,
+  .announcement-bar,
+  .floating-whatsapp,
+  .back-to-top,
+  .site-footer,
+  .btn {
+    display: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  .section {
+    padding: 1.5rem 0 !important;
+  }
+}

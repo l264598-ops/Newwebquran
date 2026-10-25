@@ -1,0 +1,6 @@
+{
+  "name": "Online Quran Academy — Teacher Bua Qasim Shigry",
+  "description": "Premium online Quran academy website for Teacher Bua Qasim Shigry featuring personalized Quran classes, Tajweed, Islamic resources, prayer times, digital tasbeeh, and course enrollment.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

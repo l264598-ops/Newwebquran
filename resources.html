@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Islamic Resources | Digital Tasbeeh, Prayer Times &amp; Duas | Online Quran Academy</title>
+    <meta name="description" content="Free authentic Islamic educational tools: Digital Tasbeeh counter, live prayer times, verified daily Masnoon duas, Hadith selections, and Namaz guide." />
+    <meta property="og:title" content="Islamic Resources | Online Quran Academy" />
+    <meta property="og:description" content="Free Digital Tasbeeh counter, prayer times calculator, daily supplications, and learning guides." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/assets/images/hero_quran_study.jpg" />
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <!-- Announcement Bar -->
+    <aside class="announcement-bar" aria-label="Announcement">
+      <div class="container">
+        <span>Free Islamic Daily Tools: Digital Tasbeeh, Prayer Times &amp; Daily Duas.</span>
+        <a href="#tasbeehSection">Try Tasbeeh &rarr;</a>
+      </div>
+    </aside>
+
+    <!-- Navigation Header -->
+    <header class="site-header">
+      <div class="container">
+        <nav class="navbar" aria-label="Main Navigation">
+          <div class="brand-zone">
+            <a href="index.html" style="display:flex; align-items:center; gap:0.75rem;">
+              <div class="brand-logo-icon" aria-hidden="true">📖</div>
+              <div class="brand-text">
+                <span class="brand-title">Quran Academy</span>
+                <span class="brand-subtitle">Teacher Bua Qasim Shigry</span>
+              </div>
+            </a>
+          </div>
+
+          <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="courses.html" class="nav-link">Courses</a></li>
+            <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+            <li class="nav-dropdown">
+              <a href="resources.html" class="nav-link active dropdown-trigger">
+                <span>Islamic Resources</span>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+              </a>
+              <div class="dropdown-panel">
+                <a href="#tasbeehSection" class="dropdown-item">Digital Tasbeeh</a>
+                <a href="#prayerTimesSection" class="dropdown-item">Prayer Times</a>
+                <a href="#dailyDuasSection" class="dropdown-item">Daily Duas</a>
+                <a href="#hadithSection" class="dropdown-item">Hadith Studies</a>
+                <a href="#namazSection" class="dropdown-item">Namaz Guide</a>
+                <a href="#tipsSection" class="dropdown-item">Quran Learning Tips</a>
+              </div>
+            </li>
+            <li><a href="books.html" class="nav-link">Books</a></li>
+            <li><a href="shop.html" class="nav-link">Store</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+          </ul>
+
+          <div class="nav-actions">
+            <a href="login.html" class="nav-auth-link">Login</a>
+            <a href="demo.html" class="btn btn-primary">Book Free Demo</a>
+            <button type="button" class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Header -->
+      <section style="background-color:var(--color-canvas-alt); border-bottom:1px solid var(--color-border); padding:3.5rem 0;">
+        <div class="container" style="text-align:center; max-width:48rem;">
+          <span class="section-kicker">Spiritual &amp; Educational Tools</span>
+          <h1 style="font-size:clamp(2rem, 3.5vw, 2.75rem); font-weight:800; color:var(--color-primary-dark); margin-bottom:0.75rem;">
+            Islamic Resource Center
+          </h1>
+          <p style="font-size:1.05rem; color:var(--color-text-muted); line-height:1.6;">
+            A verified sanctuary for your daily worship: interactive digital Tasbeeh counter, astronomical prayer schedules, authentic Masnoon supplications, and study advice.
+          </p>
+        </div>
+      </section>
+
+      <!-- 1. Digital Tasbeeh Counter Section -->
+      <section class="section" id="tasbeehSection">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-kicker">Interactive Worship Tool</span>
+            <h2 class="section-title">Digital Tasbeeh Counter</h2>
+            <p class="section-subtitle">
+              Maintain mindful Dhikr anytime on your phone, tablet, or laptop with optional subtle audio feedback and targets.
+            </p>
+          </div>
+
+          <div id="tasbeehCard" class="tasbeeh-card">
+            <!-- Dhikr Selector -->
+            <div class="tasbeeh-dhikr-select-wrap">
+              <label for="dhikrSelect" class="form-label" style="margin-bottom:0.4rem; display:block;">Select Dhikr Preset:</label>
+              <select id="dhikrSelect" class="form-select" style="max-width:22rem; margin:0 auto; font-size:0.85rem;"></select>
+            </div>
+
+            <!-- Arabic Display -->
+            <div id="tasbeehArabic" class="tasbeeh-arabic-display">سُبْحَانَ اللَّهِ</div>
+            <div id="tasbeehTransliteration" class="tasbeeh-transliteration">SubhanAllah</div>
+            <div id="tasbeehTranslation" class="tasbeeh-translation">Glory be to Allah</div>
+
+            <!-- Progress Bar -->
+            <div class="tasbeeh-progress-bar" aria-hidden="true">
+              <div id="tasbeehProgressFill" class="tasbeeh-progress-fill"></div>
+            </div>
+
+            <!-- Main Counter Circle Button -->
+            <div id="tasbeehCircle" class="tasbeeh-counter-display" role="button" tabindex="0" aria-label="Tap to count dhikr" title="Tap or click to increment count (Spacebar supported)">
+              <div id="tasbeehCountValue" class="tasbeeh-count-value">0</div>
+              <div id="tasbeehTargetValue" class="tasbeeh-count-target">/ 33</div>
+            </div>
+
+            <p style="font-size:0.75rem; color:var(--color-text-light); margin-bottom:1.5rem;">
+              Click / tap the circle or press <kbd style="background:#eee; padding:2px 6px; border-radius:3px;">Space</kbd> on your keyboard to count.
+            </p>
+
+            <!-- Control Buttons -->
+            <div class="tasbeeh-controls">
+              <button type="button" id="tasbeehIncrementBtn" class="btn btn-primary btn-sm">
+                + Count
+              </button>
+              <button type="button" id="tasbeehUndoBtn" class="btn btn-outline btn-sm">
+                Undo
+              </button>
+              <button type="button" id="tasbeehResetBtn" class="btn btn-outline btn-sm">
+                Reset
+              </button>
+              <button type="button" id="tasbeehSoundToggle" class="btn btn-outline btn-sm">
+                Sound: OFF
+              </button>
+            </div>
+
+            <!-- Target Presets -->
+            <div style="font-size:0.78rem; font-weight:700; color:var(--color-text-muted); margin-bottom:0.5rem; text-transform:uppercase;">
+              Target Count:
+            </div>
+            <div class="tasbeeh-target-presets">
+              <button type="button" class="target-preset-btn active" data-target="33">33</button>
+              <button type="button" class="target-preset-btn" data-target="34">34</button>
+              <button type="button" class="target-preset-btn" data-target="100">100</button>
+              <button type="button" class="target-preset-btn" data-target="1000">1000</button>
+              <button type="button" class="target-preset-btn" data-target="0">Free</button>
+            </div>
+
+            <p style="font-size:0.72rem; color:var(--color-text-light); margin-top:1.5rem;">
+              <em>Notice:</em> Your counter value is saved locally on your current device browser. It is strictly private and never transmitted or shared.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. Prayer Times Section -->
+      <section class="section section-alt" id="prayerTimesSection">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-kicker">Daily Salah Times</span>
+            <h2 class="section-title">Worldwide Prayer Times</h2>
+            <p class="section-subtitle">
+              Verified astronomical calculation using standard conventions (Karachi University / ISNA / Umm Al-Qura / MWL). Select your city below.
+            </p>
+          </div>
+
+          <div class="prayer-times-wrap">
+            <!-- Header bar with City Select and Date -->
+            <div class="prayer-header-card">
+              <div>
+                <label for="prayerCitySelect" style="display:block; font-size:0.78rem; text-transform:uppercase; letter-spacing:0.04em; margin-bottom:0.35rem; color:#d8e8de;">
+                  Select Location:
+                </label>
+                <select id="prayerCitySelect" class="form-select" style="background:#ffffff; color:#192520; font-weight:600; min-width:18rem;"></select>
+                <div id="prayerLocationName" style="font-size:1.15rem; font-weight:800; margin-top:0.5rem;">Islamabad, Pakistan</div>
+                <div style="font-size:0.82rem; color:#b7cebf; margin-top:0.2rem;">
+                  <span id="prayerGregorianDate">Loading date...</span> · <span id="prayerHijriDate">Islamic Date</span>
+                </div>
+              </div>
+
+              <div>
+                <div id="prayerNextBadge" class="prayer-next-badge">
+                  Calculating next prayer...
+                </div>
+              </div>
+            </div>
+
+            <!-- Prayer 6 Cards -->
+            <div class="prayer-grid">
+              <div id="prayerCard_Fajr" class="prayer-card">
+                <div class="prayer-name">Fajr</div>
+                <div id="prayerTime_Fajr" class="prayer-time">--:--</div>
+              </div>
+              <div id="prayerCard_Sunrise" class="prayer-card">
+                <div class="prayer-name">Sunrise</div>
+                <div id="prayerTime_Sunrise" class="prayer-time">--:--</div>
+              </div>
+              <div id="prayerCard_Dhuhr" class="prayer-card">
+                <div class="prayer-name">Dhuhr</div>
+                <div id="prayerTime_Dhuhr" class="prayer-time">--:--</div>
+              </div>
+              <div id="prayerCard_Asr" class="prayer-card">
+                <div class="prayer-name">Asr</div>
+                <div id="prayerTime_Asr" class="prayer-time">--:--</div>
+              </div>
+              <div id="prayerCard_Maghrib" class="prayer-card">
+                <div class="prayer-name">Maghrib</div>
+                <div id="prayerTime_Maghrib" class="prayer-time">--:--</div>
+              </div>
+              <div id="prayerCard_Isha" class="prayer-card">
+                <div class="prayer-name">Isha</div>
+                <div id="prayerTime_Isha" class="prayer-time">--:--</div>
+              </div>
+            </div>
+
+            <div style="background:var(--color-surface); border:1px solid var(--color-border); border-radius:var(--radius-sm); padding:1rem; font-size:0.8rem; color:var(--color-text-muted); line-height:1.5;">
+              <span id="prayerApiStatus">Astronomical timings calculated based on latitude and longitude coordinates.</span>
+              <br />
+              <em>Important Note:</em> Prayer times may vary by 2 to 5 minutes based on specific calculation juristic methods (Hanafi vs Shafi'i Asr shadow length) and your local neighborhood mosque announcements. Please consult your local mosque for exact Iqamah congregation times.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Daily Duas Section -->
+      <section class="section" id="dailyDuasSection">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-kicker">Authentic Masnoon Supplications</span>
+            <h2 class="section-title">Essential Daily Duas</h2>
+            <p class="section-subtitle">
+              Authentic prayers from the Sunnah for daily life with accurate Arabic vowels, transliteration, and translation.
+            </p>
+          </div>
+
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:1.5rem;">
+            <!-- Dua 1: Waking Up -->
+            <article class="course-card">
+              <span style="font-size:0.75rem; color:var(--color-gold); font-weight:700; text-transform:uppercase;">Morning · Upon Waking Up</span>
+              <h3 style="font-size:1.15rem; font-weight:700; color:var(--color-primary-dark); margin-bottom:0.75rem;">Dua Upon Waking</h3>
+              <p class="font-arabic" style="font-size:1.35rem; color:var(--color-primary-dark); margin-bottom:0.5rem;">
+                الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ
+              </p>
+              <p style="font-size:0.84rem; font-weight:600; color:var(--color-gold); margin-bottom:0.35rem;">
+                Alhamdulillahil-ladhi ahyana ba'da ma amatana wa ilayhin-nushoor.
+              </p>
+              <p style="font-size:0.82rem; color:var(--color-text-muted); margin-bottom:0.75rem;">
+                "All praise belongs to Allah, Who brought us back to life after causing us to die, and unto Him is the resurrection."
+              </p>
+              <span style="font-size:0.72rem; color:var(--color-text-light);">Reference: Sahih al-Bukhari 6312</span>
+            </article>
+
+            <!-- Dua 2: Before Sleeping -->
+            <article class="course-card">
+              <span style="font-size:0.75rem; color:var(--color-gold); font-weight:700; text-transform:uppercase;">Night · Before Sleeping</span>
+              <h3 style="font-size:1.15rem; font-weight:700; color:var(--color-primary-dark); margin-bottom:0.75rem;">Dua Before Sleep</h3>
+              <p class="font-arabic" style="font-size:1.35rem; color:var(--color-primary-dark); margin-bottom:0.5rem;">
+                بِاسْمِكَ اللَّهُمَّ أَمُوتُ وَأَحْيَا
+              </p>
+              <p style="font-size:0.84rem; font-weight:600; color:var(--color-gold); margin-bottom:0.35rem;">
+                Bismika Allahumma amootu wa ahya.
+              </p>
+              <p style="font-size:0.82rem; color:var(--color-text-muted); margin-bottom:0.75rem;">
+                "In Your Name, O Allah, I die and I live."
+              </p>
+              <span style="font-size:0.72rem; color:var(--color-text-light);">Reference: Sahih al-Bukhari 6324</span>
+            </article>
+
+            <!-- Dua 3: Leaving the House -->
+            <article class="course-card">
+              <span style="font-size:0.75rem; color:var(--color-gold); font-weight:700; text-transform:uppercase;">Daily · Protection</span>
+              <h3 style="font-size:1.15rem; font-weight:700; color:var(--color-primary-dark); margin-bottom:0.75rem;">Leaving the Home</h3>
+              <p class="font-arabic" style="font-size:1.35rem; color:var(--color-primary-dark); margin-bottom:0.5rem;">
+                بِسْمِ اللَّهِ تَوَكَّلْتُ عَلَى اللَّهِ ، لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ
+              </p>
+              <p style="font-size:0.84rem; font-weight:600; color:var(--color-gold); margin-bottom:0.35rem;">
+                Bismillahi tawakkaltu 'alallahi, la hawla wa la quwwata illa billah.
+              </p>
+              <p style="font-size:0.82rem; color:var(--color-text-muted); margin-bottom:0.75rem;">
+                "In the Name of Allah, I place my trust in Allah; there is no power or might except with Allah."
+              </p>
+              <span style="font-size:0.72rem; color:var(--color-text-light);">Reference: Sunan Abu Dawud 5095 (Sahih)</span>
+            </article>
+
+            <!-- Dua 4: Before Eating -->
+            <article class="course-card">
+              <span style="font-size:0.75rem; color:var(--color-gold); font-weight:700; text-transform:uppercase;">Meals · Sunnah</span>
+              <h3 style="font-size:1.15rem; font-weight:700; color:var(--color-primary-dark); margin-bottom:0.75rem;">Before Eating</h3>
+              <p class="font-arabic" style="font-size:1.35rem; color:var(--color-primary-dark); margin-bottom:0.5rem;">
+                بِسْمِ اللَّهِ وَعَلَى بَرَكَةِ اللَّهِ
+              </p>
+              <p style="font-size:0.84rem; font-weight:600; color:var(--color-gold); margin-bottom:0.35rem;">
+                Bismillahi wa 'ala barakatillah.
+              </p>
+              <p style="font-size:0.82rem; color:var(--color-text-muted); margin-bottom:0.75rem;">
+                "In the Name of Allah and with the blessings of Allah."
+              </p>
+              <span style="font-size:0.72rem; color:var(--color-text-light);">Reference: Al-Hakim / Abu Dawud</span>
+            </article>
+
+            <!-- Dua 5: Seeking Knowledge -->
+            <article class="course-card">
+              <span style="font-size:0.75rem; color:var(--color-gold); font-weight:700; text-transform:uppercase;">Study · Quranic Supplication</span>
+              <h3 style="font-size:1.15rem; font-weight:700; color:var(--color-primary-dark); margin-bottom:0.75rem;">Seeking Increase in Knowledge</h3>
+              <p class="font-arabic" style="font-size:1.35rem; color:var(--color-primary-dark); margin-bottom:0.5rem;">
+                رَبِّ زِدْنِي عِلْمًا
+              </p>
+              <p style="font-size:0.84rem; font-weight:600; color:var(--color-gold); margin-bottom:0.35rem;">
+                Rabbi zidni 'ilma.
+              </p>
+              <p style="font-size:0.82rem; color:var(--color-text-muted); margin-bottom:0.75rem;">
+                "My Lord, increase me in knowledge."
+              </p>
+              <span style="font-size:0.72rem; color:var(--color-text-light);">Reference: Surah Ta-Ha (20:114)</span>
+            </article>
+
+            <!-- Dua 6: For Parents -->
+            <article class="course-card">
+              <span style="font-size:0.75rem; color:var(--color-gold); font-weight:700; text-transform:uppercase;">Family · Quranic Supplication</span>
+              <h3 style="font-size:1.15rem; font-weight:700; color:var(--color-primary-dark); margin-bottom:0.75rem;">Supplication for Parents</h3>
+              <p class="font-arabic" style="font-size:1.35rem; color:var(--color-primary-dark); margin-bottom:0.5rem;">
+                رَّبِّ ارْحَمْهُمَا كَمَا رَبَّيَانِي صَغِيرًا
+              </p>
+              <p style="font-size:0.84rem; font-weight:600; color:var(--color-gold); margin-bottom:0.35rem;">
+                Rabbir-hamhuma kama rabbayani sagheera.
+              </p>
+              <p style="font-size:0.82rem; color:var(--color-text-muted); margin-bottom:0.75rem;">
+                "My Lord, have mercy upon them as they brought me up when I was small."
+              </p>
+              <span style="font-size:0.72rem; color:var(--color-text-light);">Reference: Surah Al-Isra (17:24)</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Hadith Studies Section -->
+      <section class="section section-alt" id="hadithSection">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-kicker">Prophetic Wisdom</span>
+            <h2 class="section-title">Selected Authentic Hadith</h2>
+            <p class="section-subtitle">
+              Verified traditions of the Prophet Muhammad (ﷺ) emphasizing Quran study, integrity, and mercy.
+            </p>
+          </div>
+
+          <div style="display:flex; flex-direction:column; gap:1.25rem; max-width:48rem; margin:0 auto;">
+            <div style="background:var(--color-surface); border:1px solid var(--color-border); border-radius:var(--radius-md); padding:1.5rem;">
+              <div style="font-size:0.75rem; color:var(--color-gold); font-weight:700; text-transform:uppercase; margin-bottom:0.35rem;">Virtue of Quran Learning</div>
+              <p class="font-arabic" style="font-size:1.35rem; color:var(--color-primary-dark); margin-bottom:0.5rem;">
+                خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ
+              </p>
+              <p style="font-size:0.95rem; font-weight:600; color:var(--color-text-main); margin-bottom:0.35rem;">
+                "The best among you are those who learn the Quran and teach it."
+              </p>
+              <p style="font-size:0.82rem; color:var(--color-text-muted); margin-bottom:0.5rem;">
+                Narrated by Uthman ibn Affan (may Allah be pleased with him).
+              </p>
+              <span style="font-size:0.72rem; color:var(--color-text-light);">Source: Sahih al-Bukhari (5027)</span>
+            </div>
+
+            <div style="background:var(--color-surface); border:1px solid var(--color-border); border-radius:var(--radius-md); padding:1.5rem;">
+              <div style="font-size:0.75rem; color:var(--color-gold); font-weight:700; text-transform:uppercase; margin-bottom:0.35rem;">The Reward for Struggling Readers</div>
+              <p class="font-arabic" style="font-size:1.35rem; color:var(--color-primary-dark); margin-bottom:0.5rem;">
+                الَّذِي يَقْرَأُ الْقُرْآنَ وَهُوَ مَاهِرٌ بِهِ مَعَ السَّفَرَةِ الْكِرَامِ الْبَرَرَةِ، وَالَّذِي يَقْرَأُ الْقُرْآنَ وَيَتَتَعْتَعُ فِيهِ وَهُوَ عَلَيْهِ شَاقٌّ لَهُ أَجْرَانِ
+              </p>
+              <p style="font-size:0.95rem; font-weight:600; color:var(--color-text-main); margin-bottom:0.35rem;">
+                "The one who is proficient in the recitation of the Quran will be with the honorable and obedient scribes (angels), and he who recites the Quran and finds it difficult, stammers over it, will have a double reward."
+              </p>
+              <p style="font-size:0.82rem; color:var(--color-text-muted); margin-bottom:0.5rem;">
+                Narrated by Aisha (may Allah be pleased with her).
+              </p>
+              <span style="font-size:0.72rem; color:var(--color-text-light);">Source: Sahih Muslim (798)</span>
+            </div>
+
+            <div style="background:var(--color-surface); border:1px solid var(--color-border); border-radius:var(--radius-md); padding:1.5rem;">
+              <div style="font-size:0.75rem; color:var(--color-gold); font-weight:700; text-transform:uppercase; margin-bottom:0.35rem;">Purity of Intentions</div>
+              <p class="font-arabic" style="font-size:1.35rem; color:var(--color-primary-dark); margin-bottom:0.5rem;">
+                إِنَّمَا الْأَعْمَالُ بِالنِّيَّاتِ ، وَإِنَّمَا لِكُلِّ امْرِئٍ مَا نَوَى
+              </p>
+              <p style="font-size:0.95rem; font-weight:600; color:var(--color-text-main); margin-bottom:0.35rem;">
+                "Actions are judged by intentions, and every person will get the reward according to what he has intended."
+              </p>
+              <p style="font-size:0.82rem; color:var(--color-text-muted); margin-bottom:0.5rem;">
+                Narrated by Umar ibn al-Khattab (may Allah be pleased with him).
+              </p>
+              <span style="font-size:0.72rem; color:var(--color-text-light);">Source: Sahih al-Bukhari (1) &amp; Sahih Muslim (1907)</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Namaz Guide & Quran Learning Tips -->
+      <section class="section" id="namazSection">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-kicker">Worship Foundations</span>
+            <h2 class="section-title">Namaz &amp; Quran Learning Advice</h2>
+            <p class="section-subtitle">
+              Practical guides compiled from Teacher Bua Qasim Shigry's 16 years of educational work.
+            </p>
+          </div>
+
+          <div class="features-grid" id="tipsSection">
+            <div class="feature-card">
+              <h3 class="feature-title">The 5 Compulsory Prayers</h3>
+              <p class="feature-desc">
+                Fajr (2 Sunnah, 2 Fard), Dhuhr (4 Sunnah, 4 Fard, 2 Sunnah, 2 Nafl), Asr (4 Fard), Maghrib (3 Fard, 2 Sunnah, 2 Nafl), Isha (4 Fard, 2 Sunnah, 2 Nafl, 3 Witr, 2 Nafl).
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3 class="feature-title">Prerequisites of Salah (Shuroot)</h3>
+              <p class="feature-desc">
+                Ritual purification (Taharah via Wudu), clean clothes and place, covering the Awrah, facing Qiblah, entering the designated prayer time, and having a sincere intention (Niyyah).
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3 class="feature-title">Tajweed Rule: Noon Sakinah</h3>
+              <p class="feature-desc">
+                Four rules apply whenever Noon Sakinah (نْ) or Tanween occurs: Izhar (clear pronunciation), Idgham (merging with/without Ghunnah), Iqlab (transforming into Meem), and Ikhfa (concealing with nasal sound).
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3 class="feature-title">Retaining Hifz (Dhor Routine)</h3>
+              <p class="feature-desc">
+                Never memorize new Sabaq without thoroughly revising your recent lessons (Sabqi). Allocating 70% of study time to revision ensures permanent memorization.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3 class="feature-title">Teaching Children With Gentleness</h3>
+              <p class="feature-desc">
+                Praise effort rather than speed. A child who recites half a page with love and confidence develops a lifelong friendship with the Holy Book.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3 class="feature-title">Personalized Guidance</h3>
+              <p class="feature-desc">
+                Need help assessing your child's recitation or your own Tajweed? Connect with Teacher Bua Qasim Shigry for a complimentary consultation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Strip -->
+      <section class="demo-banner-section">
+        <div class="container">
+          <div class="demo-banner-content">
+            <h2>Join Our 1-on-1 Quran Classes</h2>
+            <p>Take your learning beyond self-study with structured live instruction.</p>
+            <div class="demo-banner-actions">
+              <a href="demo.html" class="btn btn-secondary btn-lg">Book Free Demo Class</a>
+              <a href="courses.html" class="btn btn-outline-white btn-lg">Explore Courses</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div style="display:flex; align-items:center; gap:0.65rem; margin-bottom:0.75rem;">
+              <span style="font-size:1.5rem;" aria-hidden="true">📖</span>
+              <span style="font-size:1.15rem; font-weight:800; color:#ffffff;">Quran Academy</span>
+            </div>
+            <p class="footer-desc">
+              Online Quran Academy founded and instructed by Teacher Bua Qasim Shigry. 16 years of dedicated Quran teaching experience providing 1-on-1 personalized lessons worldwide.
+            </p>
+          </div>
+          <div class="footer-col">
+            <h5>Navigation</h5>
+            <ul class="footer-links-list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Teacher</a></li>
+              <li><a href="courses.html">All Courses</a></li>
+              <li><a href="pricing.html">Pricing &amp; Plans</a></li>
+              <li><a href="demo.html">Book Free Demo</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Islamic Resources</h5>
+            <ul class="footer-links-list">
+              <li><a href="#tasbeehSection">Digital Tasbeeh</a></li>
+              <li><a href="#prayerTimesSection">Prayer Times</a></li>
+              <li><a href="#dailyDuasSection">Daily Duas</a></li>
+              <li><a href="#hadithSection">Hadith Studies</a></li>
+              <li><a href="books.html">Book Library</a></li>
+              <li><a href="shop.html">Islamic Store</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Direct Contact</h5>
+            <ul class="footer-contact-list">
+              <li class="footer-contact-item">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                <span>WhatsApp: <a href="#" data-wa-type="general" style="color:var(--color-gold); font-weight:600;">Message on WhatsApp</a></span>
+              </li>
+              <li class="footer-contact-item">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                <span>Email: <a href="mailto:info@quranacademyshigry.com" style="color:#b7cebf;">info@quranacademyshigry.com</a></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>
+            &copy; <span class="dynamic-year">2026</span> Online Quran Academy — Teacher Bua Qasim Shigry.
+          </div>
+          <div class="footer-legal-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <span>·</span>
+            <a href="terms.html">Terms &amp; Conditions</a>
+            <span>·</span>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <a href="#" class="floating-whatsapp" aria-label="Chat with Teacher Bua Qasim Shigry on WhatsApp">
+      <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.529 1.769.78 2.791.78h.005c3.18 0 5.766-2.587 5.767-5.766.001-3.18-2.585-5.766-5.772-5.766zm9.969 5.766c-.002 5.519-4.489 9.999-10.003 9.999-1.745 0-3.374-.455-4.802-1.251L2 22l1.522-5.556C2.68 14.98 2.222 13.31 2.224 11.938 2.226 6.42 6.713 1.94 12.031 1.94c5.518 0 10.005 4.479 10.007 9.998z"/></svg>
+    </a>
+    <button type="button" class="back-to-top" aria-label="Back to top">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+    </button>
+
+    <script src="js/main.js"></script>
+    <script src="js/tasbeeh.js"></script>
+    <script src="js/prayer-times.js"></script>
+  </body>
+</html>

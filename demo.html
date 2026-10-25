@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book a Free Demo Class | Online Quran Academy — Teacher Bua Qasim Shigry</title>
+    <meta name="description" content="Reserve a complimentary 30-minute 1-on-1 Quran evaluation session with Teacher Bua Qasim Shigry. No obligation, 100% free trial for kids and adults." />
+    <meta property="og:title" content="Book a Free Demo Class | Online Quran Academy" />
+    <meta property="og:description" content="Complimentary 1-on-1 Quran class trial with 16-year veteran educator Teacher Bua Qasim Shigry." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/assets/images/hero_quran_study.jpg" />
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <!-- Announcement Bar -->
+    <aside class="announcement-bar" aria-label="Announcement">
+      <div class="container">
+        <span>No Credit Card Required · 100% Free 30-Minute Trial Session</span>
+        <a href="#" data-wa-type="demo">Quick Question on WhatsApp &rarr;</a>
+      </div>
+    </aside>
+
+    <!-- Navigation Header -->
+    <header class="site-header">
+      <div class="container">
+        <nav class="navbar" aria-label="Main Navigation">
+          <div class="brand-zone">
+            <a href="index.html" style="display:flex; align-items:center; gap:0.75rem;">
+              <div class="brand-logo-icon" aria-hidden="true">📖</div>
+              <div class="brand-text">
+                <span class="brand-title">Quran Academy</span>
+                <span class="brand-subtitle">Teacher Bua Qasim Shigry</span>
+              </div>
+            </a>
+          </div>
+
+          <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="courses.html" class="nav-link">Courses</a></li>
+            <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+            <li class="nav-dropdown">
+              <a href="resources.html" class="nav-link dropdown-trigger">
+                <span>Islamic Resources</span>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+              </a>
+              <div class="dropdown-panel">
+                <a href="resources.html#tasbeehSection" class="dropdown-item">Digital Tasbeeh</a>
+                <a href="resources.html#prayerTimesSection" class="dropdown-item">Prayer Times</a>
+                <a href="resources.html#dailyDuasSection" class="dropdown-item">Daily Duas</a>
+                <a href="resources.html#hadithSection" class="dropdown-item">Hadith Studies</a>
+                <a href="resources.html#namazSection" class="dropdown-item">Namaz Guide</a>
+              </div>
+            </li>
+            <li><a href="books.html" class="nav-link">Books</a></li>
+            <li><a href="shop.html" class="nav-link">Store</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+          </ul>
+
+          <div class="nav-actions">
+            <a href="login.html" class="nav-auth-link">Login</a>
+            <a href="demo.html" class="btn btn-primary active">Book Free Demo</a>
+            <button type="button" class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Header -->
+      <section style="background-color:var(--color-canvas-alt); border-bottom:1px solid var(--color-border); padding:3.5rem 0;">
+        <div class="container" style="text-align:center; max-width:44rem;">
+          <span class="section-kicker">Complimentary Trial Session</span>
+          <h1 style="font-size:clamp(2rem, 3.5vw, 2.75rem); font-weight:800; color:var(--color-primary-dark); margin-bottom:0.75rem;">
+            Book Your Free Demo Class
+          </h1>
+          <p style="font-size:1.05rem; color:var(--color-text-muted); line-height:1.6;">
+            Experience 1-on-1 Quran instruction firsthand with Teacher Bua Qasim Shigry. We will assess your current level, discuss your goals, and let you experience our interactive virtual classroom.
+          </p>
+        </div>
+      </section>
+
+      <!-- Demo Booking Form Section -->
+      <section class="section">
+        <div class="container">
+          <!-- Success Dispatch Notice (Populated by JS) -->
+          <div id="demoSuccessMessage" style="display:none; max-width:44rem; margin:0 auto 2rem;"></div>
+
+          <div class="form-card">
+            <form id="demoBookingForm" novalidate>
+              <div class="form-grid">
+                <!-- Student Name -->
+                <div class="form-group">
+                  <label for="demoStudentName" class="form-label">
+                    Student Full Name <span class="required">*</span>
+                  </label>
+                  <input type="text" id="demoStudentName" class="form-input" placeholder="e.g. Abdullah Khan" required />
+                  <span class="form-error">Please provide the student's name.</span>
+                </div>
+
+                <!-- Parent/Guardian Name -->
+                <div class="form-group">
+                  <label for="demoParentName" class="form-label">
+                    Parent / Guardian Name (if student is under 18)
+                  </label>
+                  <input type="text" id="demoParentName" class="form-input" placeholder="e.g. Tariq Khan" />
+                </div>
+
+                <!-- Email Address -->
+                <div class="form-group">
+                  <label for="demoEmail" class="form-label">
+                    Email Address <span class="required">*</span>
+                  </label>
+                  <input type="email" id="demoEmail" class="form-input" placeholder="you@example.com" required />
+                  <span class="form-error">Please enter a valid email address.</span>
+                </div>
+
+                <!-- WhatsApp Number -->
+                <div class="form-group">
+                  <label for="demoWhatsApp" class="form-label">
+                    WhatsApp Number (with Country Code) <span class="required">*</span>
+                  </label>
+                  <input type="tel" id="demoWhatsApp" class="form-input" placeholder="e.g. +44 7911 123456 or +1 416 555 0199" required />
+                  <span class="form-error">Please enter a valid phone/WhatsApp number.</span>
+                </div>
+
+                <!-- Country -->
+                <div class="form-group">
+                  <label for="demoCountry" class="form-label">
+                    Country of Residence <span class="required">*</span>
+                  </label>
+                  <input type="text" id="demoCountry" class="form-input" placeholder="e.g. United Kingdom, USA, Canada, Pakistan..." required />
+                  <span class="form-error">Please specify your country.</span>
+                </div>
+
+                <!-- Age Group -->
+                <div class="form-group">
+                  <label for="demoAgeGroup" class="form-label">
+                    Student Age Group <span class="required">*</span>
+                  </label>
+                  <select id="demoAgeGroup" class="form-select" required>
+                    <option value="">Select age category...</option>
+                    <option value="Young Child (Ages 4-7)">Young Child (Ages 4–7)</option>
+                    <option value="Child (Ages 8-12)">Child (Ages 8–12)</option>
+                    <option value="Teenager (Ages 13-17)">Teenager (Ages 13–17)</option>
+                    <option value="Adult (Ages 18-35)">Adult (Ages 18–35)</option>
+                    <option value="Mature Adult / Senior (35+)">Mature Adult / Senior (35+)</option>
+                  </select>
+                  <span class="form-error">Please select an age group.</span>
+                </div>
+
+                <!-- Preferred Course -->
+                <div class="form-group">
+                  <label for="demoCourse" class="form-label">
+                    Preferred Course <span class="required">*</span>
+                  </label>
+                  <select id="demoCourse" class="form-select" required>
+                    <option value="">Select course...</option>
+                    <option value="Quran Nazira">Quran Nazira (Full Recitation)</option>
+                    <option value="Quran with Tajweed">Quran with Tajweed Rules</option>
+                    <option value="Quran Reading for Beginners">Quran Reading for Beginners (Noorani Qaida)</option>
+                    <option value="Quran Memorization and Hifz">Quran Memorization &amp; Hifz</option>
+                    <option value="Quran Translation (Tarjuma)">Quran Translation (Tarjuma)</option>
+                    <option value="Quran Tafseer">Quran Tafseer (Exegesis)</option>
+                    <option value="Arabic Language">Arabic Language (Quranic &amp; Spoken)</option>
+                    <option value="Urdu Language">Urdu Language</option>
+                    <option value="Basic Islamic Education">Basic Islamic Education</option>
+                    <option value="Namaz and Salah Learning">Namaz &amp; Salah Learning</option>
+                    <option value="Daily Duas">Daily Masnoon Duas</option>
+                    <option value="Hadith Studies">Hadith Studies</option>
+                    <option value="Islamic History">Islamic History &amp; Seerah</option>
+                    <option value="Islamic Studies for Children">Islamic Studies for Children</option>
+                  </select>
+                  <span class="form-error">Please choose a course.</span>
+                </div>
+
+                <!-- Current Quran Learning Level -->
+                <div class="form-group">
+                  <label for="demoLevel" class="form-label">
+                    Current Reading Level <span class="required">*</span>
+                  </label>
+                  <select id="demoLevel" class="form-select" required>
+                    <option value="">Select current proficiency...</option>
+                    <option value="Absolute Beginner (Cannot read Arabic letters)">Absolute Beginner (Cannot read Arabic letters)</option>
+                    <option value="Recognize Arabic Letters only">Recognize Arabic Letters only</option>
+                    <option value="Can read slowly with difficulty">Can read slowly with difficulty</option>
+                    <option value="Fluent reader without Tajweed">Fluent reader without Tajweed</option>
+                    <option value="Intermediate Tajweed reader">Intermediate Tajweed reader</option>
+                    <option value="Looking for Memorization (Hifz)">Looking for Memorization (Hifz)</option>
+                  </select>
+                  <span class="form-error">Please select current level.</span>
+                </div>
+
+                <!-- Preferred Time Zone -->
+                <div class="form-group">
+                  <label for="demoTimezone" class="form-label">
+                    Your Time Zone <span class="required">*</span>
+                  </label>
+                  <select id="demoTimezone" class="form-select" required>
+                    <option value="">Select your local timezone...</option>
+                    <option value="UK Time (GMT / BST)">United Kingdom (GMT / BST)</option>
+                    <option value="US Eastern Time (EST / EDT)">USA / Canada Eastern (EST / EDT)</option>
+                    <option value="US Central Time (CST / CDT)">USA / Canada Central (CST / CDT)</option>
+                    <option value="US Pacific Time (PST / PDT)">USA / Canada Pacific (PST / PDT)</option>
+                    <option value="Gulf Standard Time (GST - Dubai/UAE)">UAE &amp; Gulf (GST)</option>
+                    <option value="Saudi Arabia Time (AST - Riyadh/Makkah)">Saudi Arabia (AST)</option>
+                    <option value="Pakistan Standard Time (PKT)">Pakistan Standard Time (PKT)</option>
+                    <option value="Australia Eastern Time (AEST)">Australia Eastern (AEST)</option>
+                    <option value="Other European / Asian Timezone">Other Timezone</option>
+                  </select>
+                  <span class="form-error">Please choose your timezone.</span>
+                </div>
+
+                <!-- Preferred Days -->
+                <div class="form-group">
+                  <label for="demoDays" class="form-label">
+                    Preferred Class Days <span class="required">*</span>
+                  </label>
+                  <select id="demoDays" class="form-select" required>
+                    <option value="">Select days preference...</option>
+                    <option value="Weekdays (Monday to Friday)">Weekdays (Monday to Friday)</option>
+                    <option value="Weekends (Saturday &amp; Sunday)">Weekends (Saturday &amp; Sunday)</option>
+                    <option value="Monday - Wednesday - Friday">Mon / Wed / Fri</option>
+                    <option value="Tuesday - Thursday - Saturday">Tue / Thu / Sat</option>
+                    <option value="Flexible / Any Days">Flexible / Any Days</option>
+                  </select>
+                  <span class="form-error">Please select preferred days.</span>
+                </div>
+
+                <!-- Preferred Time of Day -->
+                <div class="form-group">
+                  <label for="demoTime" class="form-label">
+                    Preferred Time of Day <span class="required">*</span>
+                  </label>
+                  <select id="demoTime" class="form-select" required>
+                    <option value="">Select timing slot...</option>
+                    <option value="Morning (8:00 AM - 12:00 PM)">Morning (8:00 AM – 12:00 PM)</option>
+                    <option value="Afternoon (12:00 PM - 4:00 PM)">Afternoon (12:00 PM – 4:00 PM)</option>
+                    <option value="Evening (4:00 PM - 8:00 PM)">Evening (4:00 PM – 8:00 PM)</option>
+                    <option value="Night (8:00 PM - 11:00 PM)">Night (8:00 PM – 11:00 PM)</option>
+                  </select>
+                  <span class="form-error">Please select a time slot.</span>
+                </div>
+
+                <!-- Additional Notes / Message -->
+                <div class="form-group col-span-2">
+                  <label for="demoNotes" class="form-label">
+                    Special Requests or Questions
+                  </label>
+                  <textarea id="demoNotes" class="form-textarea" rows="3" placeholder="Tell us about previous Quran classes, goals, or schedule preferences..."></textarea>
+                </div>
+              </div>
+
+              <!-- Static Delivery Disclaimer -->
+              <div class="form-notice">
+                <strong>Static Website Notice:</strong>
+                Submitting this form prepares your scheduling request. Because this is a static site without an email database server attached, clicking <em>"Submit Free Demo Request"</em> will generate your pre-formatted booking details and provide a direct 1-click WhatsApp transmission button so Teacher Bua Qasim Shigry receives your request immediately.
+              </div>
+
+              <div style="display:flex; justify-content:flex-end; gap:0.75rem; margin-top:1.5rem; flex-wrap:wrap;">
+                <button type="submit" class="btn btn-primary btn-lg">
+                  Submit Free Demo Request
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- What to Expect During the Demo -->
+      <section class="section section-alt">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-kicker">Session Roadmap</span>
+            <h2 class="section-title">What Happens in Your Free Demo?</h2>
+            <p class="section-subtitle">
+              Your 30-minute demo session is relaxed, encouraging, and zero-pressure.
+            </p>
+          </div>
+
+          <div class="features-grid">
+            <div class="feature-card">
+              <h3 class="feature-title">1. Warm Introduction (5 mins)</h3>
+              <p class="feature-desc">Meet Teacher Bua Qasim Shigry, get acquainted with the video connection, and discuss your learning aspirations.</p>
+            </div>
+            <div class="feature-card">
+              <h3 class="feature-title">2. Reading Evaluation (15 mins)</h3>
+              <p class="feature-desc">Read sample letters or verses from the digital Mus'haf to determine Makharij strengths and areas for Tajweed focus.</p>
+            </div>
+            <div class="feature-card">
+              <h3 class="feature-title">3. Personalized Plan (10 mins)</h3>
+              <p class="feature-desc">Teacher outlines a recommended weekly schedule, syllabus progression, and answers questions from parents or students.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div style="display:flex; align-items:center; gap:0.65rem; margin-bottom:0.75rem;">
+              <span style="font-size:1.5rem;" aria-hidden="true">📖</span>
+              <span style="font-size:1.15rem; font-weight:800; color:#ffffff;">Quran Academy</span>
+            </div>
+            <p class="footer-desc">
+              Online Quran Academy founded and instructed by Teacher Bua Qasim Shigry. 16 years of dedicated Quran teaching experience providing 1-on-1 personalized lessons worldwide.
+            </p>
+          </div>
+          <div class="footer-col">
+            <h5>Navigation</h5>
+            <ul class="footer-links-list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Teacher</a></li>
+              <li><a href="courses.html">All Courses</a></li>
+              <li><a href="pricing.html">Pricing &amp; Plans</a></li>
+              <li><a href="demo.html">Book Free Demo</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Islamic Resources</h5>
+            <ul class="footer-links-list">
+              <li><a href="resources.html#tasbeehSection">Digital Tasbeeh</a></li>
+              <li><a href="resources.html#prayerTimesSection">Prayer Times</a></li>
+              <li><a href="resources.html#dailyDuasSection">Daily Duas</a></li>
+              <li><a href="books.html">Book Library</a></li>
+              <li><a href="shop.html">Islamic Store</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Direct Contact</h5>
+            <ul class="footer-contact-list">
+              <li class="footer-contact-item">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                <span>WhatsApp: <a href="#" data-wa-type="demo" style="color:var(--color-gold); font-weight:600;">Message on WhatsApp</a></span>
+              </li>
+              <li class="footer-contact-item">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                <span>Email: <a href="mailto:info@quranacademyshigry.com" style="color:#b7cebf;">info@quranacademyshigry.com</a></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>
+            &copy; <span class="dynamic-year">2026</span> Online Quran Academy — Teacher Bua Qasim Shigry.
+          </div>
+          <div class="footer-legal-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <span>·</span>
+            <a href="terms.html">Terms &amp; Conditions</a>
+            <span>·</span>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <a href="#" class="floating-whatsapp" aria-label="Chat with Teacher Bua Qasim Shigry on WhatsApp">
+      <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.529 1.769.78 2.791.78h.005c3.18 0 5.766-2.587 5.767-5.766.001-3.18-2.585-5.766-5.772-5.766zm9.969 5.766c-.002 5.519-4.489 9.999-10.003 9.999-1.745 0-3.374-.455-4.802-1.251L2 22l1.522-5.556C2.68 14.98 2.222 13.31 2.224 11.938 2.226 6.42 6.713 1.94 12.031 1.94c5.518 0 10.005 4.479 10.007 9.998z"/></svg>
+    </a>
+    <button type="button" class="back-to-top" aria-label="Back to top">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+    </button>
+
+    <script src="js/main.js"></script>
+    <script src="js/forms.js"></script>
+  </body>
+</html>
